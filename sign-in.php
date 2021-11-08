@@ -9,7 +9,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 }
  
 // Include config file
-require_once "config.php";
+require_once "includes/config.php";
  
 // Define variables and initialize with empty values
 $username = $password = "";
@@ -94,16 +94,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 360px; padding: 20px; }
-    </style>
+    
 </head>
 <body>
-    <div class="wrapper">
-        <h2>Login</h2>
-        <p>Please fill in your credentials to login.</p>
-
+<link rel="stylesheet" href="./css/style.css">
+    
+    </head>
+    <body style="background-image: url('./img/bg 1.jpg');background-repeat:no-repeat;background-size:cover;">
+         <div class="container">
+               <div class="row pt-5">
+                   <div class="col-md-4"></div>
+                   <div class="col-md-4">
+                       <div class="card">
+                           <div class="card-body">
+                               <div class="card-header"><h2 class="header-title">Login Here</h2></div>
         <?php 
         if(!empty($login_err)){
             echo '<div class="alert alert-danger">' . $login_err . '</div>';
@@ -126,6 +130,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
             <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
         </form>
-    </div>
+     </div>
+                   </div>
+               </div>
+               <div class="col-md-4"></div>
+           </div>
+       </div>
+      
 </body>
 </html>

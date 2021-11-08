@@ -105,7 +105,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" href="./css/style.css">
     
 </head>
-<body>
+<body style="background-image: url('./img/bg 1.jpg');background-repeat:no-repeat;background-size:cover;">
      <div class="container">
            <div class="row pt-5">
                <div class="col-md-4"></div>
